@@ -1,9 +1,15 @@
 
-  # cat=basic//10; type=boolean; label=Backend-Mode:Enable the admin-only-mode for backend. Recommendation to switch on during maintenance.
+  # cat=basic/enable/10; type=boolean; label=Backend-Mode:Enable the admin-only-mode for backend. Recommendation to switch on during maintenance.
 adminOnly = 0
 
-  # cat=basic//20; type=boolean; label=Frontend-Mode:Enable the page-unavailable-mode for frontend. Recommendation to switch on during maintenance.
+  # cat=basic/enable/20; type=boolean; label=FE-Unavailable:Enable the page-unavailable-mode for frontend. Recommendation to switch on during maintenance.
 pageUnavailable_force = 0
 
-  # cat=basic//30; type=boolean; label=Extension-Caching-Mode:Enable the caching for extensionfiles like ext_localconf.php and ext_tables.php. Recommendation to switch off during development of extensions.
+  # cat=basic/enable/30; type=options[default=default,Readfile=readfile,Redirect=redirect]; label=Handling-Type:Only works if "FE-Unavailable" is selected. Set default for standardoutput.
+pageUnavailable_handlingType = default
+
+  # cat=basic/enable/40; type=text; label=Handling-String:Only works if "FE-Unavailable" is selected and "Handling-Type" is other than "default". Insert the correct value (e.g. http://www.typo3.org (Redirect) or fileadmin/error/503.html (Readfile)).
+pageUnavailable_handlingString = 
+
+  # cat=basic/enable/50; type=boolean; label=Extension-Caching-Mode:Enable the caching for extensionfiles like ext_localconf.php and ext_tables.php. Recommendation to switch off during development of extensions.
 extCache = 1
