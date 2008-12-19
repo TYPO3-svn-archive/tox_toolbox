@@ -1,0 +1,9 @@
+
+  # cat=basic//10; type=boolean; label=Backend-Mode:Enable the admin-only-mode for backend. Recommendation to switch on during maintenance.
+adminOnly = 0
+
+  # cat=basic//20; type=boolean; label=Frontend-Mode:Enable the page-unavailable-mode for frontend. Recommendation to switch on during maintenance.
+pageUnavailable_force = 0
+
+  # cat=basic//30; type=boolean; label=Extension-Caching-Mode:Enable the caching for extensionfiles like ext_localconf.php and ext_tables.php. Recommendation to switch off during development of extensions.
+extCache = 1
